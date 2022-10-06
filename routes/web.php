@@ -14,5 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+        'name'=> 'Fulvio',
+        'surname'=> 'Amati',
+        'info' => [
+            'fulvioamati@gmail.com',
+            '+39 3563452339',
+            'via del Tornio Girevole 4'
+        ]
+    ];
+    return view('home',$data);
 });
